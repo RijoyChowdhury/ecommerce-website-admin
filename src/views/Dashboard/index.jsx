@@ -72,7 +72,7 @@ const Dashboard = () => {
                         <h2 className='text-[18px] font-[600] dark:text-gray-200'>Recent Orders</h2>
                     </div>
                     <TailwingTable isChild={true} />
-                    <div className='dark:bg-gray-700 dark:text-white flex items-center justify-between p-3 gap-3 sm:rounded-b-lg'>
+                    <div className='dark:bg-gray-900 dark:text-white flex items-center justify-between p-3 gap-3 sm:rounded-b-lg'>
                         <div className='flex items-center gap-3'>
                             <span className='font-[300]'>Rows per page</span>
                             <DropdownSelect />
@@ -94,7 +94,7 @@ const Dashboard = () => {
                         <SearchBar />
                     </div>
                     <ProductsTailwingTable isChild={true} />
-                    <div className='dark:bg-gray-700 dark:text-white flex items-center justify-between p-3 gap-3 sm:rounded-b-lg'>
+                    <div className='dark:bg-gray-900 dark:text-white flex items-center justify-between p-3 gap-3 sm:rounded-b-lg'>
                         <div className='flex items-center gap-3'>
                             <span className='font-[300]'>Rows per page</span>
                             <DropdownSelect position={'top'} />

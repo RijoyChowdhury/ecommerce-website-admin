@@ -11,6 +11,7 @@ import DropdownSelect from '../../components/DropdownSelect'
 import SearchBar from '../../components/SearchBar'
 import CustomRadarChart from '../../components/Charts/RadarChart'
 import Button from '../../components/Button'
+import { Link } from 'react-router-dom'
 
 const Dashboard = () => {
     return (
@@ -37,10 +38,12 @@ const Dashboard = () => {
                                         </p>
                                     </div>
                                     <div>
-                                        <Button className='w-[250px] h-[50px]'>
-                                            <FaPlus />
-                                            <span>Add Product</span>
-                                        </Button>
+                                        <Link to='/products/upload'>
+                                            <Button className='w-[250px] h-[50px]'>
+                                                <FaPlus />
+                                                <span>Add Product</span>
+                                            </Button>
+                                        </Link>
                                     </div>
                                 </div>
                                 <div className='right-section absolute -right-10 -bottom-15'>

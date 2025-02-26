@@ -2,7 +2,7 @@ import React from 'react'
 import FlashCard from '../../components/FlashCard'
 import WavingHand from '../../assets/icons/waveHand'
 import ShopIllustration from '../../assets/images/shop-illustration.webp'
-import { Button, Pagination } from '@mui/material'
+import { Pagination } from '@mui/material'
 import { FaPlus } from 'react-icons/fa6'
 import TailwingTable from '../../components/TailwindTable'
 import PaginationComponent from '../../components/Pagination'
@@ -10,6 +10,7 @@ import ProductsTailwingTable from '../../components/ProductsTailwindTable'
 import DropdownSelect from '../../components/DropdownSelect'
 import SearchBar from '../../components/SearchBar'
 import CustomRadarChart from '../../components/Charts/RadarChart'
+import Button from '../../components/Button'
 
 const Dashboard = () => {
     return (
@@ -36,20 +37,9 @@ const Dashboard = () => {
                                         </p>
                                     </div>
                                     <div>
-                                        <Button
-                                            variant="contained"
-                                            sx={{
-                                                backgroundColor: "#3872fa",
-                                                width: "200px",
-                                                height: "50px",
-                                                borderRadius: "8px",
-                                                '&:hover': { backgroundColor: '#3067e5' },
-                                            }}
-                                            disableElevation>
-                                            <div className='flex items-center gap-2'>
-                                                <FaPlus />
-                                                <span className='font-[400] text-[14px]'>Add Product</span>
-                                            </div>
+                                        <Button className='w-[250px] h-[50px]'>
+                                            <FaPlus />
+                                            <span>Add Product</span>
                                         </Button>
                                     </div>
                                 </div>

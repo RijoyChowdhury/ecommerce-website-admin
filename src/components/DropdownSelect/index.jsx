@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Button from '../Button';
 
-const DropdownSelect = ({ position }) => {
+const DropdownSelect = ({ position = 'bottom', className }) => {
     const [openMenu, setOpenMenu] = useState(false);
     const dropdownMenuRef = useRef();
 
@@ -38,6 +38,7 @@ const DropdownSelect = ({ position }) => {
                 data-dropdown-toggle="dropdownHover"
                 data-dropdown-trigger="click"
                 onClick={toggleMenu}
+                className={`!justify-between bg-gray-50 dark:bg-gray-700 !text-gray-700 dark:!text-gray-200 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 hover:dark:bg-gray-600 hover:border-gray-100 dark:hover:border-gray-600 ${className}`}
             >
                 Dropdown
                 <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -46,7 +47,7 @@ const DropdownSelect = ({ position }) => {
             </Button>
 
             {/* <!-- Dropdown menu --> */}
-            <div id="dropdownMenu" className={`z-10 rounded-lg shadow-sm w-44 border border-gray-200 dark:border-gray-400 bg-white divide-y divide-gray-100 dark:bg-gray-700 ${openMenu ? '' : 'opacity-0'} transition-all absolute ${determineMenuPosition()}`}>
+            <div id="dropdownMenu" className={`z-20 w-full rounded-lg shadow-sm border border-gray-200 dark:border-gray-400 bg-white divide-y divide-gray-100 dark:bg-gray-700 ${openMenu ? '' : 'hidden opacity-0'} transition-all absolute ${determineMenuPosition()}`}>
                 <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
                     <li>
                         <div className="block rounded-md mx-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" onClick={e => setOpenMenu(false)}>Dashboard</div>

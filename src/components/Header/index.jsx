@@ -77,7 +77,7 @@ const Header = ({ handleSidebarToggle }) => {
                         </span>
                     </Button>
                 </div>
-                
+
                 <div>
                     <Button className='!rounded-full w-[40px] h-[40px] bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600'>
                         <Badge color="secondary" variant="dot">
@@ -123,17 +123,17 @@ const Header = ({ handleSidebarToggle }) => {
                             </div>
                         </MenuItem>
                         <Divider />
-                        <MenuItem className='flex gap-3' sx={{ margin: '0 5px', borderRadius: '5px' }} onClick={handleClose}>
-                            <ProfileCircle fontSize={'25px'} />
+                        <MenuItem className='flex gap-3' sx={{ margin: '0 8px', borderRadius: '5px', '&:hover': { backgroundColor: 'var(--color-gray-200)' } }} onClick={handleClose}>
+                            <span className='text-[25px]'><ProfileCircle /></span>
                             <span className='text-[14px]'>My Profile</span>
                         </MenuItem>
-                        <MenuItem className='flex gap-3' sx={{ margin: '0 5px', borderRadius: '5px' }} onClick={handleClose}>
-                            <SettingsOutline fontSize={'25px'} />
+                        <MenuItem className='flex gap-3' sx={{ margin: '0 8px', borderRadius: '5px', '&:hover': { backgroundColor: 'var(--color-gray-200)' } }} onClick={handleClose}>
+                            <span className='text-[25px]'><SettingsOutline /></span>
                             <span className='text-[14px]'>Account Settings</span>
                         </MenuItem>
                         <Divider />
-                        <MenuItem className='flex gap-3' sx={{ margin: '0 5px', borderRadius: '5px' }} onClick={handleClose}>
-                            <LogoutSquare01 fontSize={'25px'} />
+                        <MenuItem className='flex gap-3' sx={{ margin: '0 8px', borderRadius: '5px', '&:hover': { backgroundColor: 'var(--color-gray-200)' } }} onClick={handleClose}>
+                            <span className='text-[25px]'><LogoutSquare01 /></span>
                             <span className='text-[14px]'>Log Out</span>
                         </MenuItem>
                     </Menu>

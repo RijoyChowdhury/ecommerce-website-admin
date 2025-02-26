@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Button from '../Button';
 
 const DropdownSelect = ({ position }) => {
     const [openMenu, setOpenMenu] = useState(false);
+    const dropdownMenuRef = useRef();
 
     const toggleMenu = () => {
         setOpenMenu(state => !state)
@@ -17,8 +18,21 @@ const DropdownSelect = ({ position }) => {
         }
     }
 
+    useEffect(() => {
+        let handler = (event) => {
+            if (dropdownMenuRef?.current && !dropdownMenuRef?.current.contains(event.target)) {
+                setOpenMenu(false);
+            }
+        }
+        document.addEventListener('mousedown', handler);
+
+        return () => {
+            document.removeEventListener('mousedown', handler);
+        }
+    }, []);
+
     return (
-        <div className='relative'>
+        <div ref={dropdownMenuRef} className='relative'>
             <Button
                 id="dropdownHoverButton"
                 data-dropdown-toggle="dropdownHover"
@@ -32,7 +46,7 @@ const DropdownSelect = ({ position }) => {
             </Button>
 
             {/* <!-- Dropdown menu --> */}
-            <div id="dropdownHover" className={`z-10 border border-gray-200 dark:border-gray-400 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 ${openMenu ? '' : 'hidden'} transition-all absolute ${determineMenuPosition()}`}>
+            <div id="dropdownMenu" className={`z-10 rounded-lg shadow-sm w-44 border border-gray-200 dark:border-gray-400 bg-white divide-y divide-gray-100 dark:bg-gray-700 ${openMenu ? '' : 'opacity-0'} transition-all absolute ${determineMenuPosition()}`}>
                 <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
                     <li>
                         <div className="block rounded-md mx-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" onClick={e => setOpenMenu(false)}>Dashboard</div>

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import TrashDuotoneLine from '../../assets/icons/trash'
+import Button from '../../components/Button'
+import Save from '../../assets/icons/save'
 
 const ProductUpload = () => {
     return (
@@ -14,12 +16,12 @@ const ProductUpload = () => {
                     </div>
 
                     <div className='flex gap-3'>
-                        <div to='/products/upload' className="flex items-center justify-center gap-3 text-[15px] text-white bg-blue-500 hover:bg-blue-600 ring-1 focus:outline-none focus:ring-blue-300 font-light rounded-lg px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:hover:ring-blue-600 dark:ring-blue-600">
+                        <Button className="">
                             <span>
-                                <TrashDuotoneLine />
+                                <TrashDuotoneLine fontSize={'20px'} />
                             </span>
                             <span>Reset Fields</span>
-                        </div>
+                        </Button>
                     </div>
                 </div>
 
@@ -52,22 +54,11 @@ const ProductUpload = () => {
                 {/* submit section */}
                 <div className='bg-white dark:bg-gray-900 sticky z-10 bottom-0 border-t border-gray-200 dark:border-gray-700 p-3 -mx-5'>
                     <div className='flex justify-end gap-3'>
-                        <Link to='/products/upload' className="flex items-center justify-center gap-3 text-[15px] text-white bg-blue-500 hover:bg-blue-600 ring-1 focus:outline-none focus:ring-blue-300 font-light rounded-lg px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:hover:ring-blue-600 dark:ring-blue-600">
-                            <span>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    width="1em"
-                                    height="1em"
-                                //   {...props}
-                                >
-                                    <path
-                                        fill="currentColor"
-                                        d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"
-                                    ></path>
-                                </svg>
-                            </span>
-                            <span>Save Product</span>
+                        <Link to='/products'>
+                            <Button>
+                                <span><Save /></span>
+                                <span>Save Product</span>
+                            </Button>
                         </Link>
                     </div>
                 </div>

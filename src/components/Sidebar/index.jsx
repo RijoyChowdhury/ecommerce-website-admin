@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Button } from '@mui/material'
 import DashboardVertDuotone from '../../assets/icons/dashboard'
 import UsersDuotone from '../../assets/icons/users'
 import InventoryDuotone from '../../assets/icons/inventory'
@@ -12,7 +11,6 @@ import ChevronDownDuotone from '../../assets/icons/chevronDown'
 import { Collapse } from 'react-collapse'
 import './style.css'
 import LogoFull from '../../assets/icons/logoFull'
-import { SiPanasonic } from 'react-icons/si'
 
 const blankSectionState = {
     section1: false,

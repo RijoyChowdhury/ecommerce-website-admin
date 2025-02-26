@@ -1,4 +1,4 @@
-import { Avatar, Badge, Button, Divider, Menu, MenuItem } from '@mui/material'
+import { Avatar, Badge, Divider, Menu, MenuItem } from '@mui/material'
 import React from 'react'
 import './style.css'
 import avatar from '../../assets/images/avatar.webp'
@@ -8,9 +8,8 @@ import LogoutSquare01 from '../../assets/icons/logout'
 import BellLight from '../../assets/icons/bell'
 import MessageTextAltOutline from '../../assets/icons/message'
 import BaselineMenu from '../../assets/icons/menu'
-import LightBulbDuotone from '../../assets/icons/lightBulb'
-import SunDuotone from '../../assets/icons/sun'
-import MoonDuotone from '../../assets/icons/moon'
+import Button from '../Button'
+import DayNight from '../../assets/icons/dayNight'
 
 
 const menuProps = {
@@ -63,40 +62,47 @@ const Header = ({ handleSidebarToggle }) => {
     return (
         <header className='w-full h-full py-2 px-5 bg-white border-b border-gray-200 dark:border-gray-700 shadow-sm flex items-center justify-between dark:bg-gray-900 dark:shadow-gray-700'>
             <div className='part1'>
-                <Button className='!w-[40px] !h-[40px] !min-w-[40px] !text-gray-700 !rounded-full' disableRipple={true} onClick={handleSidebarToggle}>
-                    <BaselineMenu fontSize={'25px'} color={darkMode ? 'white' : ''} />
+                <Button className="!rounded-full w-[40px] h-[40px] bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600" onClick={handleSidebarToggle}>
+                    <span className='text-[25px] text-gray-700 dark:text-gray-200'>
+                        <BaselineMenu />
+                    </span>
                 </Button>
             </div>
 
             <div className='part2 w-[40%] flex items-center justify-end gap-5'>
                 <div>
-                    <Button className='!w-[40px] !h-[40px] !min-w-[40px] !text-gray-700 !rounded-full' disableRipple={true} onClick={changeTheme}>
-                        {darkMode
-                            ? <span className='text-gray-700 dark:text-gray-200'><SunDuotone fontSize={'30px'} /></span>
-                            : <span className='text-gray-700 dark:text-gray-200'><MoonDuotone fontSize={'30px'} /></span>
-                        }
+                    <Button className='!rounded-full w-[40px] h-[40px] bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600' onClick={changeTheme}>
+                        <span className='text-[20px] text-gray-700 dark:text-gray-200'>
+                            <DayNight />
+                        </span>
                     </Button>
                 </div>
+                
                 <div>
-                    <Button className='!w-[40px] !h-[40px] !min-w-[40px] !text-gray-700 !rounded-full' disableRipple={true}>
+                    <Button className='!rounded-full w-[40px] h-[40px] bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600'>
                         <Badge color="secondary" variant="dot">
-                            <span className='text-gray-700 dark:text-gray-200'><MessageTextAltOutline fontSize={'27px'} /></span>
+                            <span className='text-[27px] text-gray-700 dark:text-gray-200'>
+                                <MessageTextAltOutline />
+                            </span>
                         </Badge>
                     </Button>
                 </div>
 
                 <div>
-                    <Button className='!w-[40px] !h-[40px] !min-w-[40px] !text-gray-700 !rounded-full' disableRipple={true}>
+                    <Button className='!rounded-full w-[40px] h-[40px] bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600'>
                         <Badge color="secondary" variant="dot">
-                            <span className='text-gray-700 dark:text-gray-200'><BellLight fontSize={'27px'} /></span>
+                            <span className='text-[27px] text-gray-700 dark:text-gray-200'>
+                                <BellLight />
+                            </span>
                         </Badge>
                     </Button>
                 </div>
 
                 <div>
-                    <Button className='!w-[40px] !h-[40px] !min-w-[40px] !text-[rgba(0,0,0,0.8)] !rounded-full' disableRipple={true} onClick={handleClick}>
+                    <Button className='!rounded-full w-[40px] h-[40px] bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600' onClick={handleClick}>
                         <Avatar src={avatar} sx={{ width: 35, height: 35 }} />
                     </Button>
+
                     <Menu
                         className="user-menu"
                         anchorEl={anchorEl}

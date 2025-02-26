@@ -97,7 +97,7 @@ const Dashboard = () => {
                     <div className='dark:bg-gray-700 dark:text-white flex items-center justify-between p-3 gap-3 sm:rounded-b-lg'>
                         <div className='flex items-center gap-3'>
                             <span className='font-[300]'>Rows per page</span>
-                            <DropdownSelect />
+                            <DropdownSelect position={'top'} />
                         </div>
                         <div className='flex items-center justify-between gap-3'>
                             <span className='font-[300]'>Page 3 of 10</span>

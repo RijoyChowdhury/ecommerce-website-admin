@@ -1,0 +1,8 @@
+.MuiBadge-badge {
+    background: #ff5252 !important;
+}
+
+.user-menu .MuiAvatar-circular {
+    width: 45px !important;
+    height: 45px !important;
+}

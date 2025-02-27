@@ -50,7 +50,7 @@ const UsersTailwindTable = ({ isChild }) => {
                             </td>
                             <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 <div className='flex gap-2'>
-                                    <Avatar src={avatar} sx={{}} />
+                                    <Avatar src={avatar} sx={{ width: 50, height: 50 }} />
                                     <div className='flex flex-col justify-center'>
                                         <span>John Cameron</span>
                                     </div>

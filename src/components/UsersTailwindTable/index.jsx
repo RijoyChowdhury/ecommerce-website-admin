@@ -26,7 +26,7 @@ const UsersTailwindTable = ({ isChild }) => {
                             </div>
                         </th>
                         <th scope="col" class="px-6 py-5">
-                            Name
+                            User
                         </th>
                         <th scope="col" class="px-6 py-5">
                             Email
@@ -73,12 +73,12 @@ const UsersTailwindTable = ({ isChild }) => {
                                 New York, US
                             </td>
                             <td class="px-6 py-4">
-                                <div className='flex items-center gap-2 text-green-600'>
-                                    <span className='block w-[6px] h-[6px] bg-green-600 rounded-full'></span>
+                                <div className='flex items-center gap-2 text-green-600 dark:text-green-500'>
+                                    <span className='block w-[6px] h-[6px] bg-green-600 dark:bg-green-500 rounded-full'></span>
                                     <span>Active</span>
                                 </div>
-                                <div className='flex items-center gap-2 text-red-600'>
-                                    <span className='block w-[6px] h-[6px] bg-red-600 rounded-full'></span>
+                                <div className='flex items-center gap-2 text-red-600 dark:text-red-500'>
+                                    <span className='block w-[6px] h-[6px] bg-red-600 dark:bg-red-500 rounded-full'></span>
                                     <span>Suspended</span>
                                 </div>
                             </td>

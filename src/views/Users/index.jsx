@@ -8,6 +8,8 @@ import Magnifier from '../../assets/icons/magnifier'
 import Filter from '../../assets/icons/filter'
 import Tabs from '../../assets/icons/tabs'
 import UsersTailwindTable from '../../components/UsersTailwindTable'
+import DropdownSelect from '../../components/DropdownSelect'
+import PaginationComponent from '../../components/Pagination'
 
 const Users = () => {
     return (
@@ -79,7 +81,21 @@ const Users = () => {
                 </div>
 
                 {/* Users table */}
-                <UsersTailwindTable />
+                <div className='border border-gray-200 dark:border-gray-700 rounded-lg'>
+                    <UsersTailwindTable />
+                </div>
+
+                {/* Pagination */}
+                <div className=' dark:text-white flex items-center justify-between gap-3 mt-4'>
+                    <div className='flex items-center gap-3'>
+                        <span className='font-[300]'>Rows per page</span>
+                        <DropdownSelect position={'top'} />
+                    </div>
+                    <div className='flex items-center justify-between gap-3'>
+                        <span className='font-[300]'>Page 3 of 10</span>
+                        <PaginationComponent />
+                    </div>
+                </div>
 
             </div>
         </>

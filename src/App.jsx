@@ -7,6 +7,7 @@ import SignUp from './views/Signup'
 import Login from './views/Login'
 import './App.css'
 import ProductUpload from './views/ProductUpload'
+import Users from './views/Users'
 
 const App = () => {
     return (
@@ -16,6 +17,7 @@ const App = () => {
                     <Route path="/" element={<Dashboard />} />
                     <Route path="/products" element={<Products />} />
                     <Route path="/products/upload" element={<ProductUpload />} />
+                    <Route path="/users" element={<Users />} />
                 </Route>
                 <Route element={<ComponentDecorator />}>
                     <Route path="/register" element={<SignUp />} />

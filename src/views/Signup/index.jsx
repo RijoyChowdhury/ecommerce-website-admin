@@ -6,6 +6,8 @@ import PenHighlight from '../../assets/icons/highlight'
 import EyeDuotone from '../../assets/icons/eye'
 import EyeClosedOutline from '../../assets/icons/eyeClosedOutline'
 import EyeOpenOutline from '../../assets/icons/eyeOpenOutline'
+import RightArrow from '../../assets/icons/rightArrow'
+import { Link } from 'react-router-dom'
 
 const SignUp = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -65,7 +67,7 @@ const SignUp = () => {
                         </div>
                         <div className="flex items-start mb-6">
                             <div className="flex items-center h-5">
-                                <input id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required />
+                                <input id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required />
                             </div>
                             <label for="remember" className="ms-2 text-[15px] font-light text-gray-900 dark:text-gray-300">
                                 By signing up you have agreed to our <a href="#" className="text-blue-600 hover:underline dark:text-blue-500">Terms & Privacy Policy</a>.
@@ -75,26 +77,11 @@ const SignUp = () => {
                         <div className='flex mb-6 justify-center'>
                             <button type="submit" className="flex items-center justify-center gap-3 text-[15px] w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-lg px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 <span>Get Started</span>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512"
-                                    width="1em"
-                                    height="1em"
-
-                                >
-                                    <path
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="48"
-                                        d="m268 112l144 144l-144 144m124-144H100"
-                                    ></path>
-                                </svg>
+                                <RightArrow />
                             </button>
                         </div>
 
-                        <span className='font-light'>Have an account?</span> <a href="#" className="text-blue-600 hover:underline dark:text-blue-500">Sign In</a>
+                        <span className='font-light'>Have an account?</span> <Link to="/login" className="text-blue-600 hover:underline dark:text-blue-500">Sign In</Link>
                     </form>
                 </div>
             </div>

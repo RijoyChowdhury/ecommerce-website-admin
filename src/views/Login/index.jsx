@@ -6,6 +6,8 @@ import PenHighlight from '../../assets/icons/highlight'
 import EyeDuotone from '../../assets/icons/eye'
 import EyeOpenOutline from '../../assets/icons/eyeOpenOutline'
 import EyeClosedOutline from '../../assets/icons/eyeClosedOutline'
+import RightArrow from '../../assets/icons/rightArrow'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -39,7 +41,7 @@ const Login = () => {
                                 <input type={`${showPassword ? 'text' : 'password'}`} id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-[15px] rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="•••••••••" required />
 
                                 <span class="absolute right-0 bottom-0 h-[44px] inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-e-lg dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600" onClick={e => setShowPassword(!showPassword)}>
-                                    {showPassword ? <EyeClosedOutline /> : <EyeOpenOutline /> }
+                                    {showPassword ? <EyeClosedOutline /> : <EyeOpenOutline />}
                                 </span>
 
                             </div>
@@ -47,7 +49,7 @@ const Login = () => {
                         <div className="flex justify-between mb-6">
                             <div className='flex'>
                                 <div className="flex items-center h-5">
-                                    <input id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required />
+                                    <input id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required />
                                 </div>
                                 <label for="remember" className="ms-2 text-[15px] font-light text-gray-900 dark:text-gray-300">
                                     Remember Me
@@ -59,26 +61,11 @@ const Login = () => {
                         <div className='flex mb-6 justify-center'>
                             <button type="submit" className="flex items-center justify-center gap-3 text-[15px] w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-lg px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 <span>Sign In</span>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512"
-                                    width="1em"
-                                    height="1em"
-
-                                >
-                                    <path
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="48"
-                                        d="m268 112l144 144l-144 144m124-144H100"
-                                    ></path>
-                                </svg>
+                                <RightArrow />
                             </button>
                         </div>
 
-                        <span className='font-light'>Don’t have an account?</span> <a href="#" className="text-blue-600 hover:underline dark:text-blue-500">Sign Up</a>
+                        <span className='font-light'>Don’t have an account?</span> <Link to="/register" className="text-blue-600 hover:underline dark:text-blue-500">Sign Up</Link>
                     </form>
                 </div>
             </div>

@@ -6,25 +6,25 @@ const TailwingTable = ({isChild}) => {
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
-                        <th scope="col" class="px-6 py-7">
+                        <th scope="col" class="px-6 py-5">
                             Order Id
                         </th>
                         <th scope="col" class="px-6 py-5">
                             Products
                         </th>
-                        <th scope="col" class="px-6 py-7">
+                        <th scope="col" class="px-6 py-5">
                             Total
                         </th>
-                        <th scope="col" class="px-6 py-7">
+                        <th scope="col" class="px-6 py-5">
                             Status
                         </th>
-                        <th scope="col" class="px-6 py-7">
+                        <th scope="col" class="px-6 py-5">
                             Customer
                         </th>
-                        <th scope="col" class="px-6 py-7">
+                        <th scope="col" class="px-6 py-5">
                             Contact No.
                         </th>
-                        <th scope="col" class="px-6 py-7">
+                        <th scope="col" class="px-6 py-5">
                             Delivery Address
                         </th>
                     </tr>
